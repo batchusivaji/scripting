@@ -1,9 +1,11 @@
-shell
------
- what is shell?
-	shell is a small program ,which will help a user to interact with operating system(OS).
+#  ____shell scripting___
 
-steps of processing in execution at OS?
+
+ ## what is shell?
+
+- `shell is a small program ,which will help a user to interact with operating system(OS).`
+
+### steps of processing in execution at OS?
 		
 	 terminal (or)application
 		   |
@@ -14,14 +16,21 @@ steps of processing in execution at OS?
 		kernel 
 		   |
 		hardware
-what are different types of shells?
+
+### what are different types of shells?
+
+```sh
 	/bin/sh ---------> bourne shell
 	/bin/bash -------> advance bourne shell
 	/bin/csh --------> C shell
 	/bin/tsh --------> advance C shell
 	/bin/ksh --------> korn shell
 	/bin/fish -------> fish shell
- every shell is same but the difference is only syntax at shell script.
+	
+```
+- every shell is same but the difference is only syntax at shell script.
+
+ ```bash
      ex: #bash script
  	if [ condition ];then
 	# block
@@ -31,113 +40,168 @@ what are different types of shells?
 	{
  	#block
 	}
+```
 
-what is shell script?
-	it is a collection of commands executed in a given order with some logic.
+### what is shell script?
 
-can i execute bash script in c shell?
-	No
+- it is a collection of commands executed in a given order with some logic.
 
+### can i execute bash script in c shell?
 
-how can i write my shell script?
-	the first line of script is always represents the shell.
+- Ans: No
+
+### how can i write my shell script?
+
+- the first line of script is always represents the shell.
+  
+```sh
 	ex:
           #!<path of shell>
           #!/bin/bash ----> it represents the bash shell
 	  #! ---->shebang operator
-it tells to the os that we need to execute this script by this shell.
+```
 
-what is comment in shell script?
-	shell does not execute the comment line.comment line starts with '#' symbol.
+- it tells to the os that we need to execute this script by this shell.
 
-NOTE: Except the first line.
+### what is comment in shell script?
 
-what is my extention of shell script?
+- shell does not execute the comment line.comment line starts with '#' symbol.
+
+#### NOTE: `Except the first line.`
+
+### what is my extention of shell script?
+
+```bash
 	<scriptname>.sh ------> recommended for bash script 
 	<scriptname>.csh -----> c shell
 	<scriptname>.ksh -----> korn shell
-NOTE:with out extention of also the scrit is valid.
- 	<scriptname>
-because your first line tells to the os which shell is execute this script.
-extentions for human understanding purpose only.
 
-what is my script structure?
+```
+
+#### NOTE: `with out extention of also the scrit is valid.`
+
+ 	`scriptname`
+- because your first line tells to the os which shell is execute this script.
+`extentions for human understanding purpose only.`
+
+### what is my script structure?
+
 	#!/bin/bash
 	#commands
 	#commands
 	---------
 	---------
-how to execute shell script?
-	there are 3 methods to execute the script.
-method 1
+### how to execute shell script?
+- there are 3 methods to execute the script.
+- 
+### method 1
+
+```bash
 --------
  	bash <scriptname>.sh
 		(or)
 	bash <scriptname>
-method 2
+```
+
+### method 2
+
+```sh
 --------
 	sh <scriptname>.sh
 		(or)
 	sh <scriptname>
-method 3
+```
+
+### method 3
+
+```bash
 --------
 	go to the script directory and 	
 	./<scriptname>.sh
 	     (or)
 	./<scriptname>
-to execute in this way you need to give the executable permissions to that script.
-    chmod +x <scriptname> ----> give all permissions to that script to all
-    chmod 755 <scriptname> ---> give execute permissions to that script to all.
+```
+- To execute in this way you need to give the executable permissions to that script.
+- `chmod +x <scriptname>` ----> give all permissions to that script to all
+- `chmod 755 <scriptname>` ---> give execute permissions to that script to all.
 
 
-shell variables
---------------
-what is variable?
-	it is a label (or) name given to a memory location. which may hold some value.
-	x=9
-	x--->it is a variable name
-why we need a varible?
-	to store a value temporarly or permanently
+## shell variables
 
-what are different types of variables?
-	there are 3 different types of varibles.
-1)system (or) environment variables --> $HOME,$PATH,$EDITOR,$HOST,etc....
-2)user defined varibles -----> x,y,age,name,etc... 	
-3)shell special variables ---> $0,$1,$@,$#,$$,$*
+### what is variable?
 
-how to see environment variables?
+- it is a label (or) name given to a memory location. which may hold some value.
+	`x=9
+	x--->it is a variable name `
+
+### why we need a varible?
+	
+- To store a value temporarly or permanently
+
+### what are different types of variables?
+
+- there are 3 different types of varibles.
+  
+```bash
+1).system (or) environment variables --> $HOME,$PATH,$EDITOR,$HOST,etc....
+2).user defined varibles -----> x,y,age,name,etc... 	
+3).shell special variables ---> $0,$1,$@,$#,$$,$*
+
+```
+
+#### how to see environment variables?
+
  cat /env | less
 
-how to print the variable data on to screen?
-	using "echo" command we can print the data on to the screen.
- 
-how to see individual environment varibles?
- echo $HOME
+### how to print the variable data on to screen?
 
-how to define a variable name?
+- `using "echo" command we can print the data on to the screen.`
+ 
+### how to see individual environment varibles?
+
+- echo $HOME
+
+### how to define a variable name?
+
+```bash
 	<varname>=<value>
         age=21
 	echo $age -->to print the data of that variable
+```
 
-what name is use to my variable?
-	for using a varible name use the valid name only
-  valid names   
-      ex:x="technicaladda" 
-	x_name="technical adda"
-	_x="technical adda"
-	x1="technical adda"
+### what name is use to my variable?
 
-NOTE:special characters are not allowed in variable name.and variable name doesnot starts with numbers.
-	ex:1X="hello"
-	   x@5="world"
+- `for using a varible name use the valid name only`
+- `valid names` 
+    
+```
+for Example:x="technicaladda" 
+	        x_name="technical adda"
+	        _x="technical adda"
+	       x1="technical adda"
+```
+
+### NOTE:`special characters are not allowed in variable name.and variable name doesnot starts with numbers.`
+
+```bash
+Example:1X="hello"
+	    x@5="world"
 		(wrong variable format)
-how to assign a ouput of command to the variable?
+```
+
+#### how to assign a ouput of command to the variable?
+
+```bash
 	<varname>=`command`
  	we place the command in `` (back tick)
 	name='hostname' ----> hostname is assign to the name variable.
 
-how to read the data from user?
- 	using "read" command we can read the data from user.
+```
+
+### how to read the data from user?
+- `using "read" command we can read the data from user.`
+  
+```sh
 ex:
 	read x
 	echo $x
@@ -145,69 +209,83 @@ ex:
 		echo "my name is $name"
 		read "enter your age?" age
 		echo "my age is $age"
+```
 
-operators:
----------
-	 =  -->assign operator
-arthamatic opertors
--------------------
+## operators:
+
+- `=  -->assign operator`
+  
+#### arthamatic opertors
+
 	+ -->addition
 	- -->subtraction
 	* -->multiplication 
 	/ -->division
 	% -->reminder
-NOTE:in shell we are not directly perform the arthamatic operatins use the "expr" command to perfom this
+
+### NOTE:`in shell we are not directly perform the arthamatic operatins use the "expr" command to perfom this`
+
+```bash
 	 ex: c=`expr $a+$b`
 		(or)
 		c=$((a+b))
-comparision operators
----------------------
+```
+#### comparision operators
+
 	-eq (==) -->equal operator
 	-ne (!=) -->not equal
 	-gt (>)  -->greater than
 	-ge (>=) -->greater than or equal
 	-lt (<)  -->less than 
 	-le (<=) -->less than or equal
-logical operators
------------------
+
+#### logical operators
+
 	-a (and) -->logical and
 	-o (or)  -->logical or
 	! (not)  -->not operator
 
-escape sequences
-----------------
-	\n ->to go the next line 
-echo "my name "ramu"" ---------> syntax error
-echo "my name is \"ramu\"" ------>o/p my name is "ramu"
+#### escape sequences
 
-conditional statements:
------------------------
-	conditional statements are control the flow of program.
-there are different conditional statements.
+```bash
+ \n ->to go the next line 
+echo "my name "shivaji"" ---------> syntax error
+echo "my name is \"shivaji\"" ------>o/p my name is "shivaji"
+```
+
+####  conditional statements:
+
+- conditional statements are control the flow of program.
+- there are different conditional statements.
+
 1)if..fi	-->if block
 2)if..else..fi  -->if else block
 3)if..elif..elif..else..fi -->elseif ladder
 
-what is condition?
-	condition is an expression which will either true or false.
+### what is condition?
+- `condition is an expression which will either true or false.`
 
-if:
----
-	if statements are use to make a decision. decision means condition,if the condition is valid then execute this block otherwise not allowed to come in block.
+#### if:
 
+- `if statements are use to make a decision. decision means condition,if the condition is valid then execute this block otherwise not allowed to come in block.`
 
-if syntax
----------
+- if syntax
+  
+```bash
 	if [ condition ];then --->if statement start
 	#true block
 	#commands
 	fi	---------------> if statement end
-if..else
---------
-	if..else will give if condition is true if block is executed,otherwise else block is executed.
 
-if..else syntax
----------------
+```
+
+### if..else
+
+- `if..else will give if condition is true if block is executed,otherwise else block is executed.`
+
+- if..else syntax
+
+```bash
 	if [ condition ];then --->if statement start
 	#true block
 	#commmand
@@ -215,12 +293,15 @@ if..else syntax
 	#false block
 	#commads
 	fi	---------------> if statement end
-if..elif..elif..else
---------------------
-	this statement will give more choices to the user.
+```
 
-syntax
-------
+### if..elif..elif..else
+
+- `This statement will give more choices to the user.`
+
+- syntax
+
+```bash
 	if [ condition ];then --->if statement start
 	#true block
 	---------
@@ -234,24 +315,29 @@ syntax
 	#false block
 	-----------
 	fi	---------------> if statement end
-here we can see the different types of tests using if statements.8
+```
+
+- here we can see the different types of tests using if statements.8
+  
 1)file test
 2)number test
 3)string test
 4)logical test
 
-1)file test
------------
-	using this test we can perform operations on file
+### file test
 
- some options are their to perform operations on file
-	-f -->check if the file exists or not
-	-d -->check if the dir exists or not
-	-r -->check if the file/dir has read permissions or not
-	-w -->check if the file/dir has write permissions or not
-	-x -->check if the file/dir has executable permissions or not
-	-s -->check if the file/dir size is greater than zero or not
+- using this test we can perform operations on file
 
+- some options are their to perform operations on file
+  
+  - `-f -->check if the file exists or not`
+  - `-d -->check if the dir exists or not`
+  - `-r -->check if the file/dir has read permissions or not`
+  - `-w -->check if the file/dir has write permissions or not`
+  - `-x -->check if the file/dir has executable permissions or not`
+
+- Example:
+```bash
 if [ -f "/etc/passwd" ];then
 echo "passwd file is exists"
 fi
@@ -261,21 +347,27 @@ else
 echo "shadow file does not have read permissions"
 fi
 
-2)string test
--------------
-	we can check the strings equal or not
+```
+
+### string test
+
+- we can check the strings equal or not
+  
 	str1==str2 
 	str1!=str2
 
 
-3)number test
--------------
+### number test
+
 	x==y
 	x!=y
 	x>y
 	x>=y
 	x<y
 	x<=y
+- Example:
+  
+```bash
 marks=60
 if [ $marks -gt 70 ];then
 echo "grade A"
@@ -288,16 +380,19 @@ echo "fail"
 else
 echo "invalid input"
 fi 
+```
 
-what is passing value by argument?
-	it is one way to send the arguments as input to the script.so,here while script is going to be run we pass the arguments as input from the command line.
-from the command line we can pass max 9 arguments.
+### what is passing value by argument?
+
+- it is one way to send the arguments as input to the script.so,here while script is going to be run we pass the arguments as input from the command line.
+- from the command line we can pass max 9 arguments.
 	./<scriptname>.sh <arg1> <arg2> ..............<arg9>
-the argument names are $0,$1...............$9
-$0 represents script name.
 
-4)logical test
---------------
+- `the argument names are $0,$1...............$9`
+- `$0 represents script name.`
+
+### logical test
+-
  	-a (and)	|	-o (or)			|	! (not)
 ------------------------------------------------------------------------------
 A	B 	o/p	|	A	B	o/p	|	A	B
@@ -308,10 +403,12 @@ F 	T	F	|	F	T	T	|
 F	F	F	|	F	F	F	|
    
 
-ex:	if [ ! $1 ];then 
+Example: 
+  ``` bash if [ ! $1 ];then 
 	echo "argument required"
- 
-	if [ $marks -gt 70 -a $marks -le 60 ];then
+	```
+ ```bash
+    if [ $marks -gt 70 -a $marks -le 60 ];then
 	echo "grade A"
 	elif [ $marks -lt 60 -a $marks -ge 50 ];then
 	echo "grade B"
@@ -322,30 +419,35 @@ ex:	if [ ! $1 ];then
 	else
 	echo "invalid input"
 	fi 
-home work 1
------------
-write a script to create a user?
-1)take the username as command line argument
-2)set the default password
-3)check you have  privilages to create user
-4)check the user is already present or not
-5)create a user
-6)assign a password
-7)make a user as admin user
+```
+
+### Exsercise
+
+- write a script to create a user?
+   - 1)take the username as command line argument
+   - 2)set the default password
+   - 3)check you have  privilages to create user
+   - 4)check the user is already present or not
+   - 5)create a user
+   - 6)assign a password
+   - 7)make a user as admin user
 
 
-case statement
---------------
-	case statement is give multiple choices to the user.
-syntax
------
+### case statement
+
+- `case statement is give multiple choices to the user.`
+  
+- syntax
+
+```yaml
 	case <varname> in	--->case statement start
 	choice1)#1st action ;;
 	choice2)#2nd action;;
 	choice3)#3nd action;;
 	*)#if all matches not found	
 	esac			--->case statement end
-
+```
+```bash
 ex:	case $osname in
  centos)echo "you choose centos"
 	echo "use yum to install the packages"
@@ -355,24 +457,27 @@ ubuntu)echo "you choose ubumtu"
 solaris)echo "you choose solaris"
 	echo "use package to install the packages"
 *)echo "you choose wrong osname"
+```
 
-home work 2
------------
-	convert case statement to if..elif..elif.else statements.
+Exercise
 
-loops
------
-	loops are executed a block of the code repeatedly in a specific number of times.
-	there are different types of loops are their.
-1)for loop
-2)while loop
-3)until loop
+- convert case statement to if..elif..elif.else statements.
+
+## loops
+
+- loops are executed a block of the code repeatedly in a specific number of times.
+- there are different types of loops are their.
+   - 1)for loop
+   - 2)while loop
+   - 3)until loop
  
-1)for loop
------------
-	to execute the block of the code repeatedly in spectific tiemes.
-syntax
-------
+#### for loop
+
+- To execute the block of the code repeatedly in spectific tiemes.
+  
+- syntax
+
+```bash
 	for <varname> in <data (or) list>
 	do			-->block start here
 	#block of code
@@ -387,15 +492,19 @@ syntax
 	do 
 	echo "the os name is $i"
 	done
-home work 3 
------------
-	create multiple users using for loop.
+```
 
-while loop
-----------
-	a block of code is executed repeatedly until condition fails.
-syntax
-------
+### Exsercise
+
+- 9 create multiple users using for loop.
+
+#### while loop
+
+- a block of code is executed repeatedly until condition fails.
+  
+- syntax
+
+```bash
 	initilazer 			
 	while [ condition ]
 	do			-->block start here
@@ -411,19 +520,23 @@ syntax
 	  (or)
 	i=$((i+1))
 
-homework 4
-----------
-	take a backup of etc dir daily.	
-	etc-04-oct-2017.tar.gz
-	etc-05-oct-2017.tar.gz
+```
+
+### Exercise
+
+- take a backup of etc dir daily.	
+	etc-04-oct-20123.tar.gz
+	etc-05-oct-20123.tar.gz
 	----------------------
 
 
-until loop 
-----------
-	a block of code is executed repeatedly until condition true.
-syntax
-------
+### until loop 
+
+- a block of code is executed repeatedly until condition true.
+  
+- syntax
+
+```bash
 	initilizer 
 	until [ condition ]
 	do		---->block start here
@@ -437,23 +550,33 @@ syntax
 	echo $i
 	i=`expr $i+1`
 	done
+```
 
-functions:
-----------
-what is a function?
-	function is a peace of code to do a particular task.
-why we need function?
-	1)to avoid repeat of code
-	2)make it simple and efficient
-syntax
-------
+## functions:
+
+#### what is a function?
+
+- function is a peace of code to do a particular task.
+  
+#### why we need function?
+	- 1)to avoid repeat of code
+	- 2)make it simple and efficient
+	- 
+- syntax
+
+```bash
 	function() -->function defination
 	{
 	#action 
 	}
 	function  -->function call
-what is function defination?
-	function defination describes the what the function can do.
+```
+
+### what is function defination?
+
+- function defination describes the what the function can do.
+  
+```bash
       ex:add()
 	{
 	count=1
@@ -464,21 +587,33 @@ what is function defination?
 	done
 	echo "the sum of numbers is $sum"
 	}
-what is function call?
-	just we call the function with function name,after calling happen only the function is executed.
-	add ---->just specify the name to call the function
+```
 
-can we pass the arguments to the function?
-	yes
-how can we pass the arguments to the function?
+### what is function call?
+
+- just we call the function with function name,after calling happen only the function is executed.
+  
+- add ---->just specify the name to call the function
+
+#### can we pass the arguments to the function?
+- Ans: yes
+  
+### how can we pass the arguments to the function?
+
+```bash
 	add()
 	{
 	echo `expr $0+$1`
 	}
 
 	add 4 3 -->passing 4 3 to the add function
-can function return anything?
-	yes,using "return" key word it can return
+```
+
+### can function return anything?
+
+- Ans: yes,using "return" key word it can return
+  
+```bash
 	add()
  	{
         return `expr $0+$1`	-->return the addition value
@@ -486,154 +621,31 @@ can function return anything?
 	sum=add 4 3		-->return value store in sum variable
 	echo $sum
 
-fumction file
--------------
-what is the speciality of function file?
-1)it doesnot start with #! (shebang operator)
-2)it will have execute permission
-3)it has to load in memory.
+```
 
-in the function file just we define the functions task only.
-just load this file in to the memory.
-      ex:showdir()
+### function file
+
+### what is the speciality of function file?
+
+  - 1)it doesnot start with #! (shebang operator)
+  - 2)it will have execute permission
+  - 3)it has to load in memory.
+
+- `in the function file just we define the functions task only.`
+
+- just load this file in to the memory.
+      - ex:showdir()
 	{
 	ls -l | grep "^d"
 	}
-we make shortcuts using functions.
+- we make shortcuts using functions.
 
-how to load functions in memory?
+- how to load functions in memory?
+  
 	source <function file name>
 
-how to unload function from memory?
+- how to unload function from memory?
 
 	unset <function name>
 	
-we can not unload all functions at a time. to unload all the functions from memory just logout and login.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	 
+- we can not unload all functions at a time. to unload all the functions from memory just logout and login.
