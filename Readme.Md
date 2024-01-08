@@ -1,1 +1,0 @@
-borne shell scripting notes
