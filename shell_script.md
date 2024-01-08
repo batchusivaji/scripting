@@ -97,7 +97,7 @@
 ### method 1
 
 ```bash
---------
+
  	bash <scriptname>.sh
 		(or)
 	bash <scriptname>
@@ -106,7 +106,7 @@
 ### method 2
 
 ```sh
---------
+
 	sh <scriptname>.sh
 		(or)
 	sh <scriptname>
@@ -115,7 +115,7 @@
 ### method 3
 
 ```bash
---------
+
 	go to the script directory and 	
 	./<scriptname>.sh
 	     (or)
