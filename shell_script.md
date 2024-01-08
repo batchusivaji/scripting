@@ -1,4 +1,4 @@
-#  ____shell scripting___
+#  ____shell scripting ___
 
 
  ## what is shell?
@@ -403,10 +403,13 @@ F 	T	F	|	F	T	T	|
 F	F	F	|	F	F	F	|
    
 
-Example: 
-  ``` bash if [ ! $1 ];then 
+- Example: 
+
+``` bash 
+  if [ ! $1 ];then 
 	echo "argument required"
-	```
+```
+
  ```bash
     if [ $marks -gt 70 -a $marks -le 60 ];then
 	echo "grade A"
