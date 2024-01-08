@@ -462,7 +462,7 @@ solaris)echo "you choose solaris"
 *)echo "you choose wrong osname"
 ```
 
-Exercise
+- Exercise
 
 - convert case statement to if..elif..elif.else statements.
 
@@ -499,7 +499,7 @@ Exercise
 
 ### Exsercise
 
-- 9 create multiple users using for loop.
+- create multiple users using for loop.
 
 #### while loop
 
